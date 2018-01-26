@@ -38,6 +38,7 @@ class Container extends Component {
                     </Grid>
                     <Grid item xs={12}>
                         <Paper className={classes.paper}>
+                            <h2>Zadania na dzisiaj</h2>
                             <TasksList/>
                         </Paper>
                     </Grid>

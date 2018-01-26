@@ -18,10 +18,10 @@ class App extends Component {
         const {classes} = this.props;
         return (
                 <Paper className={classes.root} elevation={4}>
-                    <Typography type="headline" component="h3">
+                    <Typography type="display2" gutterBottom>
                         Zaplanuj swój dzień.
                     </Typography>
-                    <Typography component="p">
+                    <Typography type="subheading" gutterBottom>
                         Dodaj zadanie, a nie zapomnisz o niczym ważnym.
                     </Typography>
                     <Container/>

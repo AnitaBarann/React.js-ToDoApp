@@ -5,7 +5,7 @@ import green from 'material-ui/colors/green';
 import {ListItem, ListItemSecondaryAction, ListItemText} from 'material-ui/List';
 import {FormControlLabel} from 'material-ui/Form';
 import Checkbox from 'material-ui/Checkbox';
-import IconButton from 'material-ui/IconButton';
+import Button from 'material-ui/Button';
 import DeleteIcon from 'material-ui-icons/Delete';
 
 const style = {
@@ -49,9 +49,9 @@ class TasksList extends Component {
             <ListItemText primary={this.props.name} style={this.state.checked ? style.checked : style.unChecked}/>
 
             <ListItemSecondaryAction>
-                <IconButton aria-label="Delete">
+                <Button fab aria-label="delete" className={classes.button}>
                     <DeleteIcon onClick={this.props.onDelete}/>
-                </IconButton>
+                </Button>
             </ListItemSecondaryAction>
 
         </ListItem>
