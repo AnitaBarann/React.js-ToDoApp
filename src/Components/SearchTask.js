@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 
-class TasksList extends Component {
+class SearchTask extends Component {
     render() {
         return (
             <div>
-                Tasks List
+               Search Task
             </div>
         );
     }
 }
 
 
-export default TasksList;
+export default SearchTask;

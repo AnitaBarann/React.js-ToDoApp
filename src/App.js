@@ -1,12 +1,37 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, {Component} from 'react';
+import Container from "./Components/Container";
+import PropTypes from 'prop-types';
+import {withStyles} from 'material-ui/styles';
+import Paper from 'material-ui/Paper';
+import Typography from 'material-ui/Typography';
+
+const styles = theme => ({
+    root: theme.mixins.gutters({
+        paddingTop: 16,
+        paddingBottom: 16,
+        marginTop: theme.spacing.unit * 3,
+    }),
+});
 
 class App extends Component {
-  render() {
-    return (
-        <div></div>
-    );
-  }
+    render() {
+        const {classes} = this.props;
+        return (
+                <Paper className={classes.root} elevation={4}>
+                    <Typography type="headline" component="h3">
+                        Zaplanuj swój dzień.
+                    </Typography>
+                    <Typography component="p">
+                        Dodaj zadanie, a nie zapomnisz o niczym ważnym.
+                    </Typography>
+                    <Container/>
+                </Paper>
+        );
+    }
 }
 
-export default App;
+App.propTypes = {
+    classes: PropTypes.object.isRequired,
+}
+
+export default withStyles(styles)(App);
